@@ -6,6 +6,7 @@ package-lock.json
 *.js
 *.js.map
 *.d.ts
-
+.idea
+yarn.lock
 tmp
 openshift.local.clusterup

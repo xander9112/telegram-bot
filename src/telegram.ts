@@ -6,13 +6,15 @@ const TextCommand = Telegram.TextCommand;
 const TOKEN = env.get('TOKEN', '').asString();
 const tg = new Telegram.Telegram(TOKEN);
 
+import { OtherwiseController } from './telegram/OtherwiseController';
+
 const form = {
   name: {
     q: 'Send me your name',
     error: 'sorry, wrong input',
     validator: (message: any, callback: any) => {
       if (message.text) {
-        callback(true, message.text); //you must pass the result also
+        callback(true, message.text); // you must pass the result also
         return;
       }
 
@@ -64,5 +66,6 @@ class PingController extends TelegramBaseController {
 }
 
 tg.router
-  .when(new TextCommand('ping', 'pingCommand'), new PingController())
-  .when(new TextCommand('startForm', 'startForm'), new PingController());
+  .when(new TextCommand('/ping', 'pingCommand'), new PingController())
+  .when(new TextCommand('/startForm', 'startForm'), new PingController())
+  .otherwise(new OtherwiseController());
