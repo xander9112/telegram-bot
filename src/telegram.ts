@@ -49,6 +49,10 @@ class PingController extends TelegramBaseController {
    */
   pingHandler($: any) {
     $.sendMessage('pong');
+
+    setTimeout(() => {
+      $.sendMessage('pong with setTimeout');
+    }, 3000);
   }
 
   startForm($: any) {
