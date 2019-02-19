@@ -45,8 +45,8 @@ export class ImageController extends Telegram.TelegramBaseController {
       method: "GET",
       uri: "https://randomuser.me/api/"
     })
-      .then(({ results }) => {
-        console.log(results)
+      .then((results) => {
+        console.log(results);
         const result = results[0];
         const { name: { title, first, last } } = result;
 
