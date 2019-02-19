@@ -2,14 +2,14 @@
   "name": "openshift-ts",
   "version": "0.2.0",
   "description": "A sample TypeScript application that can be deployed on OpenShift",
-  "main": "src/server.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "tsc",
     "nodeshift": "nodeshift",
     "postinstall": "npm run build",
     "precommit": "prettier --write --single-quote src/*.ts && git add .",
-    "start": "node dist/server.js | pino",
-    "start-dev": "nodemon -e ts -x ts-node src/server.ts | pino",
+    "start": "node dist/index.js | pino",
+    "start-dev": "nodemon -e ts -x ts-node src/index.ts | pino",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
