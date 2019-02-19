@@ -1,3 +1,11 @@
-dist
 node_modules
-.idea
+package-lock.json
+.DS_Store
+
+# These are generated - safe to ignore
+*.js
+*.js.map
+*.d.ts
+
+tmp
+openshift.local.clusterup
