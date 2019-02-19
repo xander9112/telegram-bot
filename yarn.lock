@@ -2616,6 +2616,13 @@ tar@^4, tar@^4.0.1:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
+telegram-node-bot@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/telegram-node-bot/-/telegram-node-bot-4.0.5.tgz#1f565acbe89925b0127656606696d8761bea1907"
+  integrity sha1-H1Zay+iZJbASdlZgZpbYdhvqGQc=
+  dependencies:
+    tiny_request latest
+
 term-size@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/term-size/-/term-size-1.2.0.tgz#458b83887f288fc56d6fffbfad262e26638efa69"
@@ -2635,6 +2642,11 @@ timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
   integrity sha1-8y6srFoXW+ol1/q1Zas+2HQe9W8=
+
+tiny_request@latest:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/tiny_request/-/tiny_request-1.0.13.tgz#81b99777947519d34b0e73ac9eb6f5027a552f92"
+  integrity sha1-gbmXd5R1GdNLDnOsnrb1AnpVL5I=
 
 to-object-path@^0.3.0:
   version "0.3.0"
