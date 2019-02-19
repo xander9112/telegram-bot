@@ -4,7 +4,13 @@ const Telegram = require('telegram-node-bot');
 const TelegramBaseController = Telegram.TelegramBaseController;
 const TextCommand = Telegram.TextCommand;
 const TOKEN = env.get('TOKEN', '').asString();
-const tg = new Telegram.Telegram(TOKEN);
+const tg = new Telegram.Telegram(TOKEN, {
+  webAdmin: {
+    port: 1436,
+    host:
+      'http://telegram-bot-telegram.7e14.starter-us-west-2.openshiftapps.com'
+  }
+});
 
 import { OtherwiseController } from './telegram/OtherwiseController';
 
