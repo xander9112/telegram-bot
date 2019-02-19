@@ -10,7 +10,7 @@ const form = {
   name: {
     q: 'Send me your name',
     error: 'sorry, wrong input',
-    validator: (message, callback) => {
+    validator: (message: any, callback: any) => {
       if (message.text) {
         callback(true, message.text); //you must pass the result also
         return;
@@ -22,7 +22,7 @@ const form = {
   age: {
     q: 'Send me your age',
     error: 'sorry, wrong input',
-    validator: (message, callback) => {
+    validator: (message: any, callback: any) => {
       function IsNumeric(text: any) {
         return typeof text === 'number';
       }
@@ -45,12 +45,12 @@ class PingController extends TelegramBaseController {
   /**
    * @param {Scope} $
    */
-  pingHandler($) {
+  pingHandler($: any) {
     $.sendMessage('pong');
   }
 
-  startForm($) {
-    $.runForm(form, result => {
+  startForm($: any) {
+    $.runForm(form, (result: any) => {
       console.log(result);
     });
   }
